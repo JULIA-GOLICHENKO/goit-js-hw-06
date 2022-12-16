@@ -3,13 +3,14 @@ form.addEventListener('submit', onSubmit);
 function onSubmit(evt) {
     evt.preventDefault();
     const {email, password} = evt.currentTarget.elements;
-    console.log('email', email.value);
-    console.log('password', password.value);
     
-    if(email.value.length === 0 || password.value.length === 0) {
-        alert('всі поля повинні бути заповнені'); 
+    
+    if(email.value === '' || password.value === '') {
+        return alert('всі поля повинні бути заповнені'); 
            
     }
+    console.log('email', email.value);
+    console.log('password', password.value);
     form.reset();
     
 }
