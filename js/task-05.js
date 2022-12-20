@@ -6,4 +6,8 @@ inputEl.addEventListener('input', onInputChange);
 function onInputChange (event) {
    
     spanEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value === '') {
+		spanEl.textContent = 'Anonymous'
+	};
 }
+

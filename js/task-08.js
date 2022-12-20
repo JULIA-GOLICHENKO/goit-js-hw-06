@@ -2,19 +2,18 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', onSubmit);
 function onSubmit(evt) {
     evt.preventDefault();
-    const {email, password} = evt.currentTarget.elements;
-    
-    
+    const {
+        elements: { email, password },
+    } = evt.currentTarget
+        
     if(email.value === '' || password.value === '') {
         return alert('всі поля повинні бути заповнені'); 
-           
     }
-    console.log('email', email.value);
-    console.log('password', password.value);
+    const userDetails = { email: email.value, Password: password.value }
+    console.log(userDetails);
     form.reset();
-    
 }
-
+// У восьмому завданні при відправці форми потрібно виводити об'єкт з даними з полів, у вас 2 рядки.
 
 
 // Завдання 8
